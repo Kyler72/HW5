@@ -22,3 +22,9 @@ denver_homicide_df <- homicide_df %>%
 
 denver_homicide_df %>% count(solved_status)
 denver_homicide_df %>% count(race_group)
+
+denver_sf <- denver_homicide_df %>% 
+  st_as_sf(coords = c("lon", "lat"),
+           crs = 4326,
+           remove = FALSE)
+
