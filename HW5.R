@@ -32,4 +32,9 @@ denver_counties <- tracts(state = "CO",
                         county = "Denver") %>% 
   st_transform(4326)
 
+ggplot() +
+  geom_sf(data = denver_tracts,
+          fill = NA,
+          color = "grey80") 
+
 
