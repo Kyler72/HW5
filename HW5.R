@@ -35,6 +35,10 @@ denver_counties <- tracts(state = "CO",
 ggplot() +
   geom_sf(data = denver_tracts,
           fill = NA,
-          color = "grey80") 
+          color = "grey80") +
+geom_sf(data = denver_sf,
+        aes(color = race_group),
+        alpha = 0.7,
+        size = 1)
 
 
