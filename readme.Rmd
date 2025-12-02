@@ -1,0 +1,41 @@
+---
+output:
+  html_document: default
+---
+# Homicide Mapping in Denver, Colorado
+
+This assignment visualizes homicide patterns in Denver, Colorado using the Washington Post homicide data.  
+
+I created an `sf` map showing homicide locations, faceted by solved status and colored by victim race group.
+
+## Tasks Completed
+
+- Filtered the dataset to include only homicides that occurred in Denver, CO.
+- Converted homicide locations into an `sf` object for spatial data visualization.
+- Downloaded census tract boundaries for Denver using the `tigris` package.
+- Created a variable indicating whether each homicide was Solved ("Closed by arrest") or Unsolved ("Closed without arrest", "Open/No arrest").
+- Grouped victim race into the top three most frequent categories, lumping all others into "Other".
+- Produced a faceted map using `ggplot2` showing:
+  - Sub-city geography (tracts)
+  - Homicide locations as points
+  - Facets for Solved vs Unsolved
+  - Colors representing victim race (top 3 categories)
+
+## Files
+
+- `scripts/` — Contains the R script used to produce the map.
+- `README.md` — This document.
+
+## Required R Packages
+
+- `dplyr`
+- `sf`
+- `tigris`
+- `ggplot2`
+- `forcats`
+- `readr`
+
+## Author
+
+Kyle Ruszkowski
+
