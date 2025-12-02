@@ -40,6 +40,9 @@ geom_sf(data = denver_sf,
         aes(color = race_group),
         alpha = 0.7,
         size = 1) +
-  facet_wrap(~ solved_status)
+  facet_wrap(~ solved_status)  +
+  labs(
+    title = "Homicides in Denver, CO",
+    color = "Race group")
 
 
