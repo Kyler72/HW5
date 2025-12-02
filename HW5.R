@@ -19,3 +19,6 @@ denver_homicide_df <- homicide_df %>%
                          "Open/No arrest") ~ "Unsolved",
       TRUE ~ NA_character_),
     race_group = fct_lump(victim_race, n = 3))
+
+denver_homicide_df %>% count(solved_status)
+denver_homicide_df %>% count(race_group)
