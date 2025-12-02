@@ -28,3 +28,8 @@ denver_sf <- denver_homicide_df %>%
            crs = 4326,
            remove = FALSE)
 
+denver_counties <- tracts(state = "CO",
+                        county = "Denver") %>% 
+  st_transform(4326)
+
+
