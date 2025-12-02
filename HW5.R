@@ -39,6 +39,7 @@ ggplot() +
 geom_sf(data = denver_sf,
         aes(color = race_group),
         alpha = 0.7,
-        size = 1)
+        size = 1) +
+  facet_wrap(~ solved_status)
 
 
